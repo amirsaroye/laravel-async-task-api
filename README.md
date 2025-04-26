@@ -13,10 +13,17 @@ Requirements:
     - Laravel 11 (or latest stable version)
 
 Setup Instructions
-    git clone 
+1. Clone the repository
+    git clone https://github.com/amirsaroye/laravel-async-task-api.git
     cd async-task-api
 
-set your database credentials in .env, Update the following in .env:
+2. Install dependencies
+    composer install
+
+3. Copy .env.example to .env and set your database credentials:
+    cp .env.example .env
+
+4. set your database credentials in .env, Update the following in .env:
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
@@ -25,14 +32,14 @@ set your database credentials in .env, Update the following in .env:
     DB_PASSWORD=your_database_password
     QUEUE_CONNECTION=databas
 
-Run database migrations
+5. Run database migrations
     php artisan migrate
 
-Serve the application
-    php artisan serve
-
-Run the queue worker
+6. Run the queue worker
     php artisan queue:work
+
+7. Serve the application (in new terminal)
+    php artisan serve
 
 The API will be available at http://127.0.0.1:8000
 
@@ -85,6 +92,8 @@ successful response
     "task_id": "8b0561b1-20b8-4c06-a302-c1094384e54c",
     "result": "2 TSET_1.7868446166905E+125"
 }
+
+================================
 
 Asynchronous Processing Details:
     - Tasks are dispatched to a database queue.

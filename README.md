@@ -45,7 +45,7 @@ The API will be available at http://127.0.0.1:8000
 
 API Endpoints
 
-Method	Endpoint	                Description                                     Query Parameter
+Method	Endpoint	                                    Description                 Query Parameter
 POST	http://127.0.0.1:8000/api/submit-task	        Submit a new async task     text (string, required)
 GET	    http://127.0.0.1:8000/api/task-status/{task_id}	Check task status
 GET	    http://127.0.0.1:8000/api/task-result/{task_id}	Retrieve task result
